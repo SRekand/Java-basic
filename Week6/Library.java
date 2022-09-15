@@ -24,7 +24,7 @@ public class Library {
         // iterate the list of books and add all the matching books to the list found
 
         for (Book book : this.books) {
-            if (book.title().contains(title)) {
+            if(StringUtils.included(book.title(), title)) {
                 found.add(book);
             }
         }
