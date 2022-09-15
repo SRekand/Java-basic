@@ -18,4 +18,42 @@ public class Library {
             System.out.println(book);
         }
     }
+    public ArrayList<Book> searchByTitle(String title) {
+        ArrayList<Book> found = new ArrayList<Book>();
+
+        // iterate the list of books and add all the matching books to the list found
+
+        for (Book book : this.books) {
+            if (book.title().contains(title)) {
+                found.add(book);
+            }
+        }
+        return found;
+    }
+
+    public ArrayList<Book> searchByPublisher(String publisher) {
+        ArrayList<Book> found = new ArrayList<Book>();
+
+        // iterate the list of books and add all the matching books to the list found
+
+        for (Book book : this.books) {
+            if (book.publisher().contains(publisher.trim())) {
+                found.add(book);
+            }
+        }
+        return found;
+    }
+
+    public ArrayList<Book> searchByYear(int year) {
+        ArrayList<Book> found = new ArrayList<Book>();
+
+        // iterate the list of books and add all the matching books to the list found
+
+        for (Book book : this.books) {
+            if (book.year() == year) {
+                found.add(book);
+            }
+        }
+        return found;
+    }
 }
